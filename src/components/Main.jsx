@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 export default function Main() {
-    const [memeData, setMemeData] = useState(null);
+    const [memeData, setMemeData] = useState([]);
     const [meme, setMeme] = useState({
         topText: "One does not simply",
         bottomText: "Walk into Mordor",
@@ -23,7 +23,7 @@ export default function Main() {
     }
 
     function handleButtonClick() {
-        const randomId = Math.floor(Math.random() * 100);
+        const randomId = Math.floor(Math.random() * memeData.length);
         setMeme((prevMeme) => {
             return {...prevMeme, imageUrl: memeData[randomId].url}
         })

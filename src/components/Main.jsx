@@ -37,8 +37,8 @@ export default function Main() {
                         type="text"
                         placeholder="One does not simply"
                         name="topText"
-                        onChange={handleChange}
                         value={meme.topText}
+                        onChange={handleChange}
                     />
                 </label>
 
